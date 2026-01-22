@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Are You OK? - AI Mood Tracker & Safety Guardian</title>
+  <meta name="description" content="Are You OK? — AI情绪状态追踪与安全守护。极简打卡，AI分析，一键紧急提醒。" />
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#6ee7b7;
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#071026 0%, var(--bg) 100%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.4;
+      padding:32px;
+    }
+    .container{max-width:980px;margin:0 auto;}
+    .hero{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:20px;
+      align-items:center;
+      padding:28px;
+      background:linear-gradient(135deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+      border-radius:var(--radius);
+      box-shadow: 0 6px 30px rgba(2,6,23,0.6);
+    }
+    .brand{
+      display:flex;
+      gap:16px;
+      align-items:center;
+    }
+    .logo{
+      width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#60a5fa);
+      display:grid;place-items:center;font-weight:700;color:#062024;
+      box-shadow: 0 6px 18px rgba(20,60,80,0.12);
+    }
+    h1{font-size:28px;margin:0;}
+    .sub{color:var(--muted);margin-top:6px;font-size:15px}
+    .tagline{
+      display:flex;
+      gap:12px;
+      margin-top:14px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    .pill{
+      background:var(--glass);
+      color:var(--muted);
+      padding:8px 12px;
+      border-radius:999px;
+      font-weight:600;
+      font-size:13px;
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+    }
+    .cta-row{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+    .btn{
+      background:var(--accent);
+      color:#05221a;
+      border:none;padding:10px 16px;border-radius:10px;font-weight:700;
+      cursor:pointer;font-size:15px;
+      box-shadow: 0 8px 18px rgba(46,197,147,0.12);
+    }
+    .btn.secondary{
+      background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);
+    }
+    .features{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      margin-top:22px;
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:12px;padding:18px;
+      min-height:110px;
+      display:flex;flex-direction:column;gap:10px;
+      border:1px solid rgba(255,255,255,0.03);
+    }
+    .card h3{margin:0;font-size:16px}
+    .card p{margin:0;color:var(--muted);font-size:13px}
+    footer{margin-top:26px;color:var(--muted);font-size:13px;text-align:center}
+    /* responsive */
+    @media (max-width:880px){
+      .features{grid-template-columns:1fr;}
+      body{padding:18px}
+      h1{font-size:22px}
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div>
+        <div class="brand">
+          <div class="logo" aria-hidden="true">AYO</div>
+          <div>
+            <h1 id="hero-heading">Are You OK? — AI Mood Tracker & Safety Guardian</h1>
+            <p class="sub">Are You OK? — AI情绪状态追踪与安全守护。极简打卡，AI分析，一键紧急提醒。</p>
+          </div>
+        </div>
+
+        <div class="tagline" aria-hidden="false">
+          <div class="pill">1-Tap Check-In</div>
+          <div class="pill">AI Insights</div>
+          <div class="pill">Instant Alerts</div>
+        </div>
+
+        <div class="cta-row" role="group" aria-label="Primary actions">
+          <button class="btn" aria-label="One Tap Check In">1-Tap Check-In — 一键打卡</button>
+          <button class="btn secondary" aria-label="Learn More">了解更多 · AI分析</button>
+        </div>
+      </div>
+
+      <div>
+        <!-- Visual / Illustration placeholder -->
+        <div style="background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:20px;display:grid;place-items:center;height:220px;border:1px solid rgba(255,255,255,0.03);">
+          <svg width="160" height="160" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="1" y="1" width="22" height="22" rx="6" stroke="rgba(255,255,255,0.06)" stroke-width="1.2" fill="url(#g)"/>
+            <defs>
+              <linearGradient id="g" x1="0" x2="1">
+                <stop stop-color="#6ee7b7" offset="0"/>
+                <stop stop-color="#60a5fa" offset="1"/>
+              </linearGradient>
+            </defs>
+            <path d="M8 13c1-2 3-3 4-3s3 1 4 3" stroke="#042a1f" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="9" cy="9" r="1.6" fill="#042a1f"/>
+            <circle cx="15" cy="9" r="1.6" fill="#042a1f"/>
+          </svg>
+          <div style="margin-top:12px;color:var(--muted);font-size:13px;text-align:center">
+            Quick check-ins, calm insights, instant help when needed.<br/>
+            快速打卡、温和洞见、严肃时刻的一键求助。
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" aria-label="Core features">
+      <article class="card" role="article" aria-labelledby="f1">
+        <h3 id="f1">1-Tap Check-In — 极简打卡</h3>
+        <p>Log your mood in one tap. Fast, private, and designed for daily habits. 一键记录情绪，私密并易于坚持。</p>
+      </article>
+
+      <article class="card" role="article" aria-labelledby="f2">
+        <h3 id="f2">AI Insights — AI分析</h3>
+        <p>Auto-generated trends and personalized prompts that help you understand patterns. AI驱动的趋势分析与个性化建议。</p>
+      </article>
+
+      <article class="card" role="article" aria-labelledby="f3">
+        <h3 id="f3">Instant Alerts — 一键紧急提醒</h3>
+        <p>When concerning patterns appear, the app can send immediate alerts to trusted contacts or services. 出现风险征兆时可立即通知信任联系人或服务。</p>
+      </article>
+    </section>
+
+    <footer aria-label="Footer">
+      <p>Are You OK? • AI Mood Tracker & Safety Guardian — Are You OK？- AI情绪状态追踪与安全守护</p>
+      <p style="margin-top:6px;color:var(--muted)">Built for calm, privacy-first by design. • 注重隐私与易用性</p>
+    </footer>
+  </main>
+</body>
+</html>
